@@ -1,4 +1,9 @@
 language: python
 python:
   - "3.5"
+install:
+  - pip install coverage
+  - pip install coveralls
 script: make
+after_success:
+  - coveralls
