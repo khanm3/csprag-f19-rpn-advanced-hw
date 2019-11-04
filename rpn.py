@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import readline
 import operator
 
 operators = {
@@ -32,17 +31,6 @@ def calculate(arg):
 def main():
     while True:
         print(calculate(input('rpn calc> ')))
-
-    pass
-    pass
-    pass
-    pass
-    pass
-    pass
-    pass
-    pass
-    pass
-    pass
 
 if __name__ == '__main__':
     main()
