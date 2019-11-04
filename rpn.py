@@ -52,7 +52,12 @@ def colored_output(expression, result):
     else:
         s += str(arg2)
 
-    s += ' = ' + str(result)
+    s += ' = '
+
+    if (result < 0):
+        s += bright_red(result)
+    else:
+        s += str(result)
 
     return s
 
