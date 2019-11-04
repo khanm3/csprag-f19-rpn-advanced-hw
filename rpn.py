@@ -37,15 +37,18 @@ def colored_output(expression, result):
     operator = tokens[2]
     s = ''
 
+    def bright_red(arg):
+        return Style.BRIGHT + Fore.RED + str(arg) + Style.RESET_ALL
+
     if (arg1 < 0):
-        s += Fore.RED + Style.BRIGHT + str(arg1) + Style.RESET_ALL
+        s += bright_red(arg1)
     else:
         s += str(arg1)
 
     s += Fore.GREEN + ' ' +  operator + ' ' + Fore.RESET
 
     if (arg2 < 0):
-        s += Fore.RED + Style.BRIGHT + str(arg2) + Style.RESET_ALL
+        s += bright_red(arg2)
     else:
         s += str(arg2)
 
